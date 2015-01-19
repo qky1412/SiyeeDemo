@@ -22,33 +22,13 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     var contentOffsetDictionary: NSMutableDictionary!
     let reuseTableViewCellIdentifier = "TableViewCell"
     let reuseCollectionViewCellIdentifier = "CollectionViewCell"
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "爱走"
+        addProfile()
         self.myTableView!.tableFooterView = UIView(frame:CGRectZero)
-        // Do any additional setup after loading the view, typically from a nib.
-//        myBannerView.tag = -1;
-//        myBannerView.backgroundColor = UIColor.grayColor()
-//        myBannerView.pagingEnabled = true
-//        myBannerView.delegate = self
-//        myBannerView.showsHorizontalScrollIndicator = false
-//        screenSize = UIScreen.mainScreen().bounds
-//        var bannerWidth = screenSize.width
-//        myBannerView.contentSize = CGSizeMake(bannerWidth*3, 150)
-//        var x:CGFloat = 0.0
-//        for  i in 1...3{
-//            var imageView = UIImageView(frame: CGRectMake(x, 0, bannerWidth, 150))
-//            imageView.image = UIImage(named:"banner\(i).jpg")
-//            myBannerView.addSubview(imageView)
-//            x += bannerWidth
-//        }
-//        myTableView.tableHeaderView = myBannerView
         var viewsArray = NSMutableArray()
-        
         for  i in 0...2 {
             var tempImgaeView = UIImageView(frame:CGRectMake(0, 0, self.view.frame.width, 150))
             tempImgaeView.image = UIImage(named:"banner\(i + 1).jpg")
@@ -80,14 +60,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
-//        var stopPoint: CGPoint = myBannerView.contentOffset
-//        var stopIndex  = (stopPoint.x)/bannerWidth
-//        myPage.currentPage = Int(stopIndex)
-//        println("current page =   \(stopIndex)")
-//        if(scrollView.tag == -1){
-//            myTableView.reloadData()
-//        }
-        
+
     }
     override func didMoveToParentViewController(parent: UIViewController?) {
         //myTableView.reloadData()
@@ -96,13 +69,19 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if(section == 0){
-//            return "推荐用户"
-//        }else{
-//            return "推荐路线"
-//        }
-//    }
+    
+    func addProfile(){
+        var profileButton:UIButton! = UIButton(frame: CGRectMake(10, 18, 60, 60))
+        var image = UIImage(named: "profile1.png")
+        profileButton.setBackgroundImage(image, forState: UIControlState.Normal)
+        profileButton.layer.borderWidth = 2
+        profileButton.layer.borderColor = UIColor(netHex:0x007AFF).CGColor
+        profileButton.layer.cornerRadius = profileButton.frame.width / 2
+        profileButton.layer.masksToBounds = true;
+        profileButton.addTarget(self, action: "presentLeftMenuViewController:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.navigationController!.view.addSubview(profileButton)
+    }
+
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var label : UILabel = UILabel(frame: CGRectMake(0,0,view.bounds.width, 44.0))
         if(section == 0){

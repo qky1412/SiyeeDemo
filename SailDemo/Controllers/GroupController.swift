@@ -75,6 +75,15 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 125
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var routeController = self.storyboard?.instantiateViewControllerWithIdentifier("RouteCVC") as RouteCVC
+        routeController.hidesBottomBarWhenPushed = true
+        routeController.routeTitle = titles[indexPath.row]
+        self.navigationController?.pushViewController(routeController, animated: true)
+        
+    }
+    
 //    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
 //        var cell = tableView.cellForRowAtIndexPath(indexPath) as GroupTableViewCell
 //        cell.back.backgroundColor = UIColor.orangeColor()

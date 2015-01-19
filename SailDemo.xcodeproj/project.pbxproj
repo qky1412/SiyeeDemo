@@ -19,6 +19,12 @@
 		2D40F7931A5904800055D05B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D40F7921A5904800055D05B /* CoreGraphics.framework */; };
 		2D58D35C1A6798BC0013D2F9 /* UserPageStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D58D35A1A6798BC0013D2F9 /* UserPageStatusCell.swift */; };
 		2D7BCD6A1A5FB1D800202569 /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BCD691A5FB1D800202569 /* PriceRange.swift */; };
+		2D9F51AD1A6CEF2B00024015 /* RouteCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F51AC1A6CEF2B00024015 /* RouteCVC.swift */; };
+		2D9F51B01A6CF90800024015 /* RouteHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F51AE1A6CF90800024015 /* RouteHeader.swift */; };
+		2D9F51B11A6CF90800024015 /* RouteHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F51AF1A6CF90800024015 /* RouteHeader.xib */; };
+		2D9F51B41A6CFF1100024015 /* RouteGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F51B21A6CFF1100024015 /* RouteGroupCell.swift */; };
+		2D9F51B51A6CFF1100024015 /* RouteGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F51B31A6CFF1100024015 /* RouteGroupCell.xib */; };
+		2D9F51B71A6D0AE500024015 /* RouteGroupSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F51B61A6D0AE500024015 /* RouteGroupSectionHeader.swift */; };
 		2DB9AA1F1A64EA2B00E5D881 /* UserPageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9AA1D1A64EA2B00E5D881 /* UserPageCVC.swift */; };
 		2DB9AA221A64FBEC00E5D881 /* UserPageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9AA211A64FBEC00E5D881 /* UserPageTVC.swift */; };
 		2DB9AA291A651AE900E5D881 /* UserPageGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9AA271A651AE900E5D881 /* UserPageGalleryTableViewCell.swift */; };
@@ -245,6 +251,12 @@
 		2D40F7921A5904800055D05B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2D58D35A1A6798BC0013D2F9 /* UserPageStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPageStatusCell.swift; path = SailDemo/Views/UserPageStatusCell.swift; sourceTree = "<group>"; };
 		2D7BCD691A5FB1D800202569 /* PriceRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriceRange.swift; path = SailDemo/Model/PriceRange.swift; sourceTree = "<group>"; };
+		2D9F51AC1A6CEF2B00024015 /* RouteCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteCVC.swift; path = Controllers/RouteCVC.swift; sourceTree = "<group>"; };
+		2D9F51AE1A6CF90800024015 /* RouteHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteHeader.swift; path = SailDemo/Views/RouteHeader.swift; sourceTree = "<group>"; };
+		2D9F51AF1A6CF90800024015 /* RouteHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RouteHeader.xib; path = SailDemo/Views/RouteHeader.xib; sourceTree = "<group>"; };
+		2D9F51B21A6CFF1100024015 /* RouteGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteGroupCell.swift; path = SailDemo/Views/RouteGroupCell.swift; sourceTree = "<group>"; };
+		2D9F51B31A6CFF1100024015 /* RouteGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RouteGroupCell.xib; path = SailDemo/Views/RouteGroupCell.xib; sourceTree = "<group>"; };
+		2D9F51B61A6D0AE500024015 /* RouteGroupSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteGroupSectionHeader.swift; path = SailDemo/Views/RouteGroupSectionHeader.swift; sourceTree = "<group>"; };
 		2DB9AA1D1A64EA2B00E5D881 /* UserPageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPageCVC.swift; path = Controllers/UserPageCVC.swift; sourceTree = "<group>"; };
 		2DB9AA211A64FBEC00E5D881 /* UserPageTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPageTVC.swift; path = Controllers/UserPageTVC.swift; sourceTree = "<group>"; };
 		2DB9AA271A651AE900E5D881 /* UserPageGalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPageGalleryTableViewCell.swift; path = SailDemo/Views/UserPageGalleryTableViewCell.swift; sourceTree = "<group>"; };
@@ -583,8 +595,9 @@
 			isa = PBXGroup;
 			children = (
 				2DDC2E071A63AA2900D5B057 /* SailDemo-Bridging-Header.h */,
-				2DB9AA211A64FBEC00E5D881 /* UserPageTVC.swift */,
+				2D9F51AC1A6CEF2B00024015 /* RouteCVC.swift */,
 				2DB9AA1D1A64EA2B00E5D881 /* UserPageCVC.swift */,
+				2DB9AA211A64FBEC00E5D881 /* UserPageTVC.swift */,
 				2DDC2DD71A63A91200D5B057 /* GroupController.swift */,
 				2DDC2DD81A63A91200D5B057 /* DiscoveryViewController.swift */,
 				2DDC2DD91A63A91200D5B057 /* GroupDestinationTVC.swift */,
@@ -685,6 +698,11 @@
 				2D58D35A1A6798BC0013D2F9 /* UserPageStatusCell.swift */,
 				2DFEA9111A68C1800000AD80 /* UserPageGroupCell.swift */,
 				2DFEA9131A68FE8D0000AD80 /* UserPageJournal.swift */,
+				2D9F51AE1A6CF90800024015 /* RouteHeader.swift */,
+				2D9F51AF1A6CF90800024015 /* RouteHeader.xib */,
+				2D9F51B21A6CFF1100024015 /* RouteGroupCell.swift */,
+				2D9F51B31A6CFF1100024015 /* RouteGroupCell.xib */,
+				2D9F51B61A6D0AE500024015 /* RouteGroupSectionHeader.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1026,6 +1044,7 @@
 				2DDC2D1F1A63A85B00D5B057 /* 1X.png in Resources */,
 				2DDC2D471A63A85B00D5B057 /* scene6.png in Resources */,
 				2DDC2D841A63A85B00D5B057 /* profile12.png in Resources */,
+				2D9F51B11A6CF90800024015 /* RouteHeader.xib in Resources */,
 				2DDC2D4C1A63A85B00D5B057 /* tab2_highlight.png in Resources */,
 				2DDC2D221A63A85B00D5B057 /* 我的好友1X.png in Resources */,
 				2DDC2D251A63A85B00D5B057 /* 我的开组1X.png in Resources */,
@@ -1110,6 +1129,7 @@
 				2DDC2D541A63A85B00D5B057 /* tab12x.png in Resources */,
 				2DD327231A18DEE500E748DB /* LaunchScreen.xib in Resources */,
 				2DDC2D491A63A85B00D5B057 /* tab1_selected1x.png in Resources */,
+				2D9F51B51A6CFF1100024015 /* RouteGroupCell.xib in Resources */,
 				2DDC2DD61A63A8EE00D5B057 /* WeiboSDK.bundle in Resources */,
 				2DDC2D591A63A85B00D5B057 /* tab22x.png in Resources */,
 				2DDC2DC81A63A8CD00D5B057 /* slider-metal-trackBackground@2x.png in Resources */,
@@ -1161,13 +1181,16 @@
 			files = (
 				2DB9AA381A66159500E5D881 /* CSStickyHeaderFlowLayout.m in Sources */,
 				2DDC2CB11A63A83E00D5B057 /* RecomUserContainerCell.swift in Sources */,
+				2D9F51B71A6D0AE500024015 /* RouteGroupSectionHeader.swift in Sources */,
 				2DB9AA391A66159500E5D881 /* CSStickyHeaderFlowLayoutAttributes.m in Sources */,
 				2DDC2CAE1A63A83E00D5B057 /* RecomUserTableViewCell.swift in Sources */,
+				2D9F51AD1A6CEF2B00024015 /* RouteCVC.swift in Sources */,
 				2DDC2CA61A63A83E00D5B057 /* DiscoveryCollectionViewCell.swift in Sources */,
 				2DDC2DF71A63A97A00D5B057 /* ImageLoaderCache.swift in Sources */,
 				2DDC2DE71A63A91200D5B057 /* MainTabBarViewController.swift in Sources */,
 				2DB9AA221A64FBEC00E5D881 /* UserPageTVC.swift in Sources */,
 				2DDC2E0A1A63AB0200D5B057 /* UIViewController+RESideMenu.m in Sources */,
+				2D9F51B01A6CF90800024015 /* RouteHeader.swift in Sources */,
 				2DDC2DE41A63A91200D5B057 /* GroupFilterTVC.swift in Sources */,
 				2DDC2DF61A63A97A00D5B057 /* ImageLoader.swift in Sources */,
 				2DDC2CA81A63A83E00D5B057 /* DiscoveryTableViewCell.swift in Sources */,
@@ -1196,6 +1219,7 @@
 				2DDC2DC91A63A8CD00D5B057 /* NMRangeSlider.m in Sources */,
 				2DFEA9141A68FE8D0000AD80 /* UserPageJournal.swift in Sources */,
 				2D7BCD6A1A5FB1D800202569 /* PriceRange.swift in Sources */,
+				2D9F51B41A6CFF1100024015 /* RouteGroupCell.swift in Sources */,
 				2DDC2DE31A63A91200D5B057 /* GroupDestinationTVC.swift in Sources */,
 				2DDC2DE21A63A91200D5B057 /* DiscoveryViewController.swift in Sources */,
 				2DDC2DE81A63A91200D5B057 /* OrderTableViewController.swift in Sources */,

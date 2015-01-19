@@ -32,6 +32,7 @@ class UserPageCVC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         // Dispose of any resources that can be recreated.
     }
     func setupViews(){
+        
         setupCollectionViewLayout()
         self.collectionView!.registerClass(PhotoBrowserCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: reuseIdentifier)
         var statusNib = UINib(nibName: "UserPageStatusCell", bundle: nil)
@@ -84,8 +85,10 @@ class UserPageCVC: UICollectionViewController, UICollectionViewDelegateFlowLayou
             
             var controller = HMSegmentedControl(sectionTitles: ["相册", "个人信息", "状态", "游记"])
             controller.selectedTextColor = UIColor(netHex:0x007AFF)
+            controller.selectionIndicatorColor = UIColor(netHex:0x007AFF)
             controller.frame = CGRectMake(0, 0, view.frame.width, 40);
             controller.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown
+            controller.selectionIndicatorHeight = 3
             controller.addTarget(self, action: "controllerChanged:", forControlEvents:UIControlEvents.ValueChanged)
             var line = UIView(frame: CGRectMake(0, 0, controller.bounds.width, 1))
             line.backgroundColor = UIColor.brownColor()
@@ -95,18 +98,6 @@ class UserPageCVC: UICollectionViewController, UICollectionViewDelegateFlowLayou
             return cell
         }
         else{
-//            var cell2 = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: sectionHeaderId, forIndexPath: indexPath) as UICollectionReusableView
-//            var controller = HMSegmentedControl(sectionTitles: ["相册", "个人信息", "状态", "游记"])
-//            controller.selectedTextColor = UIColor.blueColor()
-//            controller.frame = CGRectMake(0, 0, view.frame.width, 50);
-//            controller.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown
-//            controller.segmentEdgeInset = UIEdgeInsets(top: 5,left: 0,bottom: 5,right: 0)
-//            //controller.alpha = 0.8
-//            controller.setSelectedSegmentIndex(UInt(selectedIndex), animated: true)
-//            cell2.addSubview(controller)
-//            controller.addTarget(self, action: "controllerChanged:", forControlEvents:UIControlEvents.ValueChanged)
-//            
-//            return cell2
             var cell = UICollectionReusableView()
             return cell
         }

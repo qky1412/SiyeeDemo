@@ -47,6 +47,8 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var userPageController = self.storyboard?.instantiateViewControllerWithIdentifier("UserPageCVC") as UserPageCVC
+        userPageController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(userPageController, animated: true)
+        
     }
 }
