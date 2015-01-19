@@ -10,6 +10,7 @@ import UIKit
 
 class UserPageSectionHeader: UICollectionReusableView {
 
+    @IBOutlet weak var controllers: HMSegmentedControl!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

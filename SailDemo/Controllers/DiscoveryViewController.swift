@@ -21,10 +21,10 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
         var nib = UINib(nibName:"DiscoveryTableViewCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: cellId)
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     override func didMoveToParentViewController(parent: UIViewController?) {
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,7 +36,7 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.signature.text = signatures[indexPath.row]
         cell.profile.image = UIImage(named: "user\(indexPath.row + 1).png")
         cell.photos = photos[indexPath.row]
-        cell.collectionView.reloadData()
+        //cell.collectionView.reloadData()
         return cell
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,5 +45,8 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 140
     }
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var userPageController = self.storyboard?.instantiateViewControllerWithIdentifier("UserPageCVC") as UserPageCVC
+        self.navigationController?.pushViewController(userPageController, animated: true)
+    }
 }

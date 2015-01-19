@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -40,7 +39,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="积分:288" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoK-Cf-QeT">
-                                <rect key="frame" x="18" y="78" width="45" height="14"/>
+                                <rect key="frame" x="18" y="86" width="45" height="14"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <color key="textColor" red="0.26789847883597884" green="0.26789847883597884" blue="0.26789847883597884" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,18 +50,18 @@
                             <constraint firstAttribute="height" constant="100" id="1G3-Cq-ycD"/>
                             <constraint firstItem="q9V-wO-UyC" firstAttribute="top" secondItem="vBp-CD-gGo" secondAttribute="top" constant="4" id="6rj-XR-7L9"/>
                             <constraint firstItem="9aF-D7-EQi" firstAttribute="top" secondItem="q9V-wO-UyC" secondAttribute="bottom" constant="2" id="IIZ-zi-1pa"/>
-                            <constraint firstItem="hoK-Cf-QeT" firstAttribute="centerX" secondItem="vBp-CD-gGo" secondAttribute="centerX" id="Jyq-09-pxf"/>
                             <constraint firstItem="9aF-D7-EQi" firstAttribute="centerX" secondItem="q9V-wO-UyC" secondAttribute="centerX" id="KhF-sC-C2k"/>
                             <constraint firstItem="hoK-Cf-QeT" firstAttribute="top" secondItem="9aF-D7-EQi" secondAttribute="bottom" constant="-5" id="NUZ-y9-0HH"/>
                             <constraint firstAttribute="width" constant="80" id="OsK-QP-J9r"/>
-                            <constraint firstItem="hoK-Cf-QeT" firstAttribute="bottom" secondItem="vBp-CD-gGo" secondAttribute="bottomMargin" id="UbQ-mN-D39"/>
-                            <constraint firstItem="hoK-Cf-QeT" firstAttribute="leading" secondItem="9aF-D7-EQi" secondAttribute="leading" id="Ywe-bP-Cgy"/>
+                            <constraint firstItem="hoK-Cf-QeT" firstAttribute="centerX" secondItem="vBp-CD-gGo" secondAttribute="centerX" id="dMh-0m-EkB"/>
+                            <constraint firstAttribute="bottom" secondItem="hoK-Cf-QeT" secondAttribute="bottom" id="lDo-LZ-rMv"/>
                             <constraint firstItem="q9V-wO-UyC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vBp-CD-gGo" secondAttribute="top" constant="4" id="mAN-Yu-ZEo"/>
                             <constraint firstItem="hoK-Cf-QeT" firstAttribute="top" secondItem="q9V-wO-UyC" secondAttribute="bottom" constant="21" id="mrC-hv-rJ9"/>
                             <constraint firstItem="q9V-wO-UyC" firstAttribute="leading" secondItem="vBp-CD-gGo" secondAttribute="leading" constant="10" id="pVA-8f-ANc"/>
+                            <constraint firstItem="hoK-Cf-QeT" firstAttribute="trailing" secondItem="9aF-D7-EQi" secondAttribute="trailing" id="q7i-js-vgN"/>
                             <constraint firstItem="9aF-D7-EQi" firstAttribute="top" secondItem="q9V-wO-UyC" secondAttribute="bottom" constant="2" id="si0-FV-f7R"/>
+                            <constraint firstItem="hoK-Cf-QeT" firstAttribute="leading" secondItem="9aF-D7-EQi" secondAttribute="leading" id="uLz-RK-O4M"/>
                             <constraint firstAttribute="bottom" secondItem="9aF-D7-EQi" secondAttribute="bottom" constant="17" id="xZn-G3-DVz"/>
-                            <constraint firstItem="hoK-Cf-QeT" firstAttribute="trailing" secondItem="9aF-D7-EQi" secondAttribute="trailing" id="xbO-Cw-pxk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

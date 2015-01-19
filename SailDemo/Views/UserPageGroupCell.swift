@@ -10,4 +10,5 @@ import UIKit
 
 class UserPageGroupCell: UICollectionViewCell {
     
+    @IBOutlet weak var title: UILabel!
 }

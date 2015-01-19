@@ -10,9 +10,13 @@ import UIKit
 
 class UserPageHeader: UICollectionReusableView {
 
+
+    @IBOutlet weak var controllerView: UIView!
+    @IBOutlet weak var name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       
     }
     
 }

@@ -9,5 +9,9 @@
 import UIKit
 
 class UserPageJournal: UICollectionViewCell {
+    @IBOutlet weak var content: UILabel!
     
+    @IBOutlet weak var photo1: UIImageView!
+    @IBOutlet weak var photo2: UIImageView!
+    @IBOutlet weak var time: UILabel!
 }

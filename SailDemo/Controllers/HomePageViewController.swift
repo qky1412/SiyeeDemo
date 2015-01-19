@@ -29,6 +29,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "爱走"
+        self.myTableView!.tableFooterView = UIView(frame:CGRectZero)
         // Do any additional setup after loading the view, typically from a nib.
 //        myBannerView.tag = -1;
 //        myBannerView.backgroundColor = UIColor.grayColor()
@@ -103,7 +104,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
 //        }
 //    }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var label : UILabel = UILabel()
+        var label : UILabel = UILabel(frame: CGRectMake(0,0,view.bounds.width, 44.0))
         if(section == 0){
             label.text = "推荐用户"
         } else if (section == 1){
@@ -111,9 +112,11 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         label.textColor = UIColor(netHex:0x007AFF)
         label.font = UIFont(name: label.font.fontName, size: 13)
+        label.backgroundColor = UIColor(netHex: 0xf0f4f8)
         return label
 //        var view = UIView(frame: CGRectMake(0, 0, myTableView.bounds.width, 30))
-//        view.backgroundColor = UIColor.grayColor()
+//        view.addSubview(label)
+//        view.backgroundColor = UIColor.whiteColor()
 //        return view
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -145,7 +148,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         if(section == 0){
             return 50
         }else {
-            return 0
+            return 0.01
         }
         
     }

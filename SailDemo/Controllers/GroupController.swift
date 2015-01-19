@@ -33,7 +33,7 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
         var nib = UINib(nibName:"GroupTableViewCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: groupCellId)
-        
+        tableView.tableFooterView = UIView(frame:CGRectZero)
         tableView.reloadData()
 
     }
@@ -69,12 +69,16 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.price.layer.cornerRadius = 13
         //cell.price.layer.backgroundColor = UIColor.redColor()
         cell.status.text = status[indexPath.row]
+       
         return cell
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 125
     }
-    
+//    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+//        var cell = tableView.cellForRowAtIndexPath(indexPath) as GroupTableViewCell
+//        cell.back.backgroundColor = UIColor.orangeColor()
+//    }
     @IBAction func selectedOrder(segue:UIStoryboardSegue) {
         let orderViewController = segue.sourceViewController as OrderTableViewController
         order = orderViewController.selectedOrder

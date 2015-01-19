@@ -7,3 +7,7 @@
 //
 
 import Foundation
+enum PriceRange {
+    case LowerPrice(Int)
+    case UpperPrice(Int)
+}

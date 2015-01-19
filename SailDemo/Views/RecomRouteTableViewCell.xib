@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -15,15 +15,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBq-pA-Lci">
-                        <rect key="frame" x="0.0" y="5" width="320" height="150"/>
+                        <rect key="frame" x="5" y="5" width="310" height="146"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="TBq-pA-Lci" secondAttribute="bottom" constant="-4" id="CI3-ec-OZS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="TBq-pA-Lci" secondAttribute="bottom" id="8Me-8H-cac"/>
+                    <constraint firstAttribute="trailing" secondItem="TBq-pA-Lci" secondAttribute="trailing" constant="5" id="CFa-Hd-ONt"/>
+                    <constraint firstItem="TBq-pA-Lci" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="bA7-DG-plg"/>
                     <constraint firstItem="TBq-pA-Lci" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-7" id="ftl-P7-vuN"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="TBq-pA-Lci" secondAttribute="trailing" constant="-8" id="mwa-KY-LtK"/>
-                    <constraint firstItem="TBq-pA-Lci" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="nj6-qt-tTJ"/>
-                    <constraint firstItem="TBq-pA-Lci" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="uVm-Y7-S2G"/>
+                    <constraint firstItem="TBq-pA-Lci" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="uIC-Pm-HOM"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
@@ -31,6 +32,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="sampleCover" destination="TBq-pA-Lci" id="vzy-Fu-SNg"/>
             </connections>
