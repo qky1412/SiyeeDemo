@@ -14,6 +14,8 @@ class RecomRouteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.sampleCover.layer.cornerRadius = 5
+        self.sampleCover.layer.masksToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

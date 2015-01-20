@@ -46,6 +46,7 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as UITableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.Blue
         cell.imageView!.image = UIImage(named: menus[indexPath.row])
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.text = menuTitles[indexPath.row]

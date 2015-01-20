@@ -28,5 +28,13 @@ class GroupTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    override func setHighlighted(highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        if(highlighted){
+            self.back.backgroundColor = UIColor.lightTextColor()
+        }else{
+            self.back.backgroundColor = UIColor.whiteColor()
+        }
+    }
+
 }

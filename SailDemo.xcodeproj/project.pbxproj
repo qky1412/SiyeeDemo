@@ -19,6 +19,8 @@
 		2D40F7931A5904800055D05B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D40F7921A5904800055D05B /* CoreGraphics.framework */; };
 		2D58D35C1A6798BC0013D2F9 /* UserPageStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D58D35A1A6798BC0013D2F9 /* UserPageStatusCell.swift */; };
 		2D7BCD6A1A5FB1D800202569 /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BCD691A5FB1D800202569 /* PriceRange.swift */; };
+		2D8A96E51A6E071500C25850 /* CustomUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A96E41A6E071500C25850 /* CustomUtils.swift */; };
+		2D8A96E91A6E5DDF00C25850 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A96E81A6E5DDF00C25850 /* MenuTVC.swift */; };
 		2D9F51AD1A6CEF2B00024015 /* RouteCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F51AC1A6CEF2B00024015 /* RouteCVC.swift */; };
 		2D9F51B01A6CF90800024015 /* RouteHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F51AE1A6CF90800024015 /* RouteHeader.swift */; };
 		2D9F51B11A6CF90800024015 /* RouteHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F51AF1A6CF90800024015 /* RouteHeader.xib */; };
@@ -251,6 +253,8 @@
 		2D40F7921A5904800055D05B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2D58D35A1A6798BC0013D2F9 /* UserPageStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPageStatusCell.swift; path = SailDemo/Views/UserPageStatusCell.swift; sourceTree = "<group>"; };
 		2D7BCD691A5FB1D800202569 /* PriceRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriceRange.swift; path = SailDemo/Model/PriceRange.swift; sourceTree = "<group>"; };
+		2D8A96E41A6E071500C25850 /* CustomUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUtils.swift; path = SailDemo/Utils/CustomUtils.swift; sourceTree = "<group>"; };
+		2D8A96E81A6E5DDF00C25850 /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTVC.swift; path = Controllers/MenuTVC.swift; sourceTree = "<group>"; };
 		2D9F51AC1A6CEF2B00024015 /* RouteCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteCVC.swift; path = Controllers/RouteCVC.swift; sourceTree = "<group>"; };
 		2D9F51AE1A6CF90800024015 /* RouteHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteHeader.swift; path = SailDemo/Views/RouteHeader.swift; sourceTree = "<group>"; };
 		2D9F51AF1A6CF90800024015 /* RouteHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RouteHeader.xib; path = SailDemo/Views/RouteHeader.xib; sourceTree = "<group>"; };
@@ -595,6 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDC2E071A63AA2900D5B057 /* SailDemo-Bridging-Header.h */,
+				2D8A96E81A6E5DDF00C25850 /* MenuTVC.swift */,
 				2D9F51AC1A6CEF2B00024015 /* RouteCVC.swift */,
 				2DB9AA1D1A64EA2B00E5D881 /* UserPageCVC.swift */,
 				2DB9AA211A64FBEC00E5D881 /* UserPageTVC.swift */,
@@ -710,6 +715,7 @@
 		2DD327421A18E46F00E748DB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D8A96E41A6E071500C25850 /* CustomUtils.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1183,6 +1189,7 @@
 				2DDC2CB11A63A83E00D5B057 /* RecomUserContainerCell.swift in Sources */,
 				2D9F51B71A6D0AE500024015 /* RouteGroupSectionHeader.swift in Sources */,
 				2DB9AA391A66159500E5D881 /* CSStickyHeaderFlowLayoutAttributes.m in Sources */,
+				2D8A96E51A6E071500C25850 /* CustomUtils.swift in Sources */,
 				2DDC2CAE1A63A83E00D5B057 /* RecomUserTableViewCell.swift in Sources */,
 				2D9F51AD1A6CEF2B00024015 /* RouteCVC.swift in Sources */,
 				2DDC2CA61A63A83E00D5B057 /* DiscoveryCollectionViewCell.swift in Sources */,
@@ -1194,6 +1201,7 @@
 				2DDC2DE41A63A91200D5B057 /* GroupFilterTVC.swift in Sources */,
 				2DDC2DF61A63A97A00D5B057 /* ImageLoader.swift in Sources */,
 				2DDC2CA81A63A83E00D5B057 /* DiscoveryTableViewCell.swift in Sources */,
+				2D8A96E91A6E5DDF00C25850 /* MenuTVC.swift in Sources */,
 				2DB9AA401A66532800E5D881 /* UserPageHeader.swift in Sources */,
 				2DDC2DF01A63A95000D5B057 /* RECommonFunctions.m in Sources */,
 				2DDC2CB01A63A83E00D5B057 /* RecomUserCollectionViewCell.swift in Sources */,

@@ -75,7 +75,8 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         var image = UIImage(named: "profile1.png")
         profileButton.setBackgroundImage(image, forState: UIControlState.Normal)
         profileButton.layer.borderWidth = 2
-        profileButton.layer.borderColor = UIColor(netHex:0x007AFF).CGColor
+        //profileButton.layer.borderColor = UIColor(netHex:0x007AFF).CGColor
+        profileButton.layer.borderColor = UIColor.groupTableViewBackgroundColor().CGColor
         profileButton.layer.cornerRadius = profileButton.frame.width / 2
         profileButton.layer.masksToBounds = true;
         profileButton.addTarget(self, action: "presentLeftMenuViewController:", forControlEvents: UIControlEvents.TouchUpInside)

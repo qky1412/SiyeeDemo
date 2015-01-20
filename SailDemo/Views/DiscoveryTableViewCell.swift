@@ -20,20 +20,31 @@ class DiscoveryTableViewCell: UITableViewCell, UICollectionViewDataSource, UICol
     @IBOutlet weak var photo4: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var back: UIView!
+    var coverView:UIView!
     var photos = [String]()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         var nib = UINib(nibName:"DiscoveryCollectionViewCell", bundle: nil)
         self.back.layer.borderWidth = 0.5
         self.back.layer.borderColor = UIColor(netHex:0xbebebe).CGColor
         collectionView.registerNib(nib, forCellWithReuseIdentifier: cellId)
         
     }
-
+    override func setHighlighted(highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        if(highlighted){
+            
+            self.back.backgroundColor = UIColor.lightTextColor()
+            
+        }else{
+            self.back.backgroundColor = UIColor.whiteColor()
+        }
+    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+       
         // Configure the view for the selected state
     }
     

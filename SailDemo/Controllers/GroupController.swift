@@ -58,7 +58,8 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
         return titles.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(groupCellId) as GroupTableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(groupCellId, forIndexPath: indexPath) as GroupTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.cover.image = UIImage(named: "scene\(indexPath.row+1).png")
         cell.title.text = titles[indexPath.row]
         cell.title.numberOfLines = 0
@@ -77,6 +78,7 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         var routeController = self.storyboard?.instantiateViewControllerWithIdentifier("RouteCVC") as RouteCVC
         routeController.hidesBottomBarWhenPushed = true
         routeController.routeTitle = titles[indexPath.row]
