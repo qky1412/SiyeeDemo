@@ -33,7 +33,25 @@ class RouteCVC: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+//    override func viewWillAppear(animated: Bool) {
+//        println(self.navigationController?.description)
+//        if (self.navigationController!.isKindOfClass(HomeNC)){
+//            if let button = (self.navigationController as HomeNC).profileButton{
+//                button.hidden = true
+//            }
+//        }
+//        
+//
+//    }
+//    override func viewWillDisappear(animated: Bool) {
+//        println(self.navigationController?.description)
+//        if (self.navigationController!.isKindOfClass(HomeNC)){
+//            if let button = (self.navigationController as HomeNC).profileButton{
+//                button.hidden = false
+//            }
+//        }
+//        
+//    }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 1.0
     }

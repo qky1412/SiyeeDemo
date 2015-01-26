@@ -22,14 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         WeiboSDK.enableDebugMode(true)
         WeiboSDK.registerApp(APPKEY)
-        
-        // Override point for customization after application launch.
-//        var navigationBarAppearace = UINavigationBar.appearance()
-//        
-//        navigationBarAppearace.tintColor = uicolorFromHex(0xffffff)
-//        navigationBarAppearace.barTintColor = uicolorFromHex(0x034517)
-//        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-//        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         return true
     }
     func uicolorFromHex(rgbValue:UInt32)->UIColor{
@@ -74,14 +66,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     
     func didReceiveWeiboResponse(response: WBBaseResponse!) {
         if (response.isKindOfClass(WBSendMessageToWeiboResponse)) {
-            var message = "响应状态:\(response.statusCode.rawValue)\n响应UserInfo数据:\(response.userInfo)\n原请求UserInfo数据:\(response.requestUserInfo)"
+            var message = "响应状态1:\(response.statusCode.rawValue)\n响应UserInfo数据:\(response.userInfo)\n原请求UserInfo数据:\(response.requestUserInfo)"
             var alert = UIAlertView(title: "发送结果", message: message, delegate: nil, cancelButtonTitle: "确定")
             alert.show()
         } else if (response.isKindOfClass(WBAuthorizeResponse)) {
-            var message = "响应状态: \(response.statusCode.rawValue)\nresponse.userId: \((response as WBAuthorizeResponse).userID)\nresponse.accessToken: \((response as WBAuthorizeResponse).accessToken)\n响应UserInfo数据: \(response.userInfo)\n原请求UserInfo数据: \(response.requestUserInfo)"
+            var message = "响应状态2: \(response.statusCode.rawValue)\nresponse.userId: \((response as WBAuthorizeResponse).userID)\nresponse.accessToken: \((response as WBAuthorizeResponse).accessToken)\n响应UserInfo数据: \(response.userInfo)\n原请求UserInfo数据: \(response.requestUserInfo)"
             var alert = UIAlertView(title: "认证结果", message: message, delegate: nil, cancelButtonTitle: "确定")
             alert.show()
         }
     }
+ 
 }
 

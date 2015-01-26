@@ -2,8 +2,8 @@
 //  RecomUserCollectionViewCell.swift
 //  SailDemo
 //
-//  Created by qky on 14/12/18.
-//  Copyright (c) 2014年 sail. All rights reserved.
+//  Created by qky on 15/1/26.
+//  Copyright (c) 2015年 sail. All rights reserved.
 //
 
 import UIKit

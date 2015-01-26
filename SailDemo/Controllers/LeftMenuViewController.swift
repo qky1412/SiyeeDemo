@@ -17,15 +17,16 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var login: UIButton!
     @IBAction func loginPressed(sender: AnyObject) {
         println("login button pressed!")
-//        var request: WBAuthorizeRequest! = WBAuthorizeRequest.request() as WBAuthorizeRequest
-//        request.redirectURI = "https://api.weibo.com/oauth2/default.html"
-//        request.scope = "all"
-//        WeiboSDK.sendRequest(request)
+        var request: WBAuthorizeRequest! = WBAuthorizeRequest.request() as WBAuthorizeRequest
+        request.redirectURI = "https://api.weibo.com/oauth2/default.html"
+        request.scope = "all"
+        WeiboSDK.sendRequest(request)
     }
     var cellId = "leftMenuCell"
     var menuTitles =  ["资料", "好友", "消息", "开组", "支付", "收藏", "设置", "关于"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = true
         self.view.backgroundColor = UIColor.clearColor()
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.opaque = false
@@ -46,7 +47,7 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as UITableViewCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.Blue
+        //cell.selectionStyle = UITableViewCellSelectionStyle.Blue
         cell.imageView!.image = UIImage(named: menus[indexPath.row])
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.text = menuTitles[indexPath.row]
@@ -67,6 +68,31 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 120
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        var menuController = self.storyboard?.instantiateViewControllerWithIdentifier("MenuTVC") as MenuTVC
+        //var userPage = self.storyboard?.instantiateViewControllerWithIdentifier("UserPageCVC") as UserPageCVC
+        switch indexPath.row{
+  
+        case 1:
+            menuController.type = MenuType.Friends
+        case 2:
+            menuController.type = MenuType.Message
+        case 3:
+            menuController.type = MenuType.Group
+        case 4:
+            menuController.type = MenuType.Purchase
+        case 5:
+            menuController.type = MenuType.Favorite
+        default:
+            menuController.type = MenuType.Friends
+        }
+        menuController.hidesBottomBarWhenPushed = true
+        (self.sideMenuViewController.contentViewController as BaseNC).pushViewController(menuController, animated: true)
+        self.sideMenuViewController.hideMenuViewController()
+        
+        
     }
     /*
     // MARK: - Navigation

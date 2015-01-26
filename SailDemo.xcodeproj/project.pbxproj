@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1382E71A7617E40026F5EE /* NewGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382E61A7617E40026F5EE /* NewGroupVC.swift */; };
+		2D1382FC1A7639120026F5EE /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382EB1A7639120026F5EE /* AbstractActionSheetPicker.m */; };
+		2D1382FD1A7639120026F5EE /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382ED1A7639120026F5EE /* ActionSheetCustomPicker.m */; };
+		2D1382FE1A7639120026F5EE /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382F01A7639120026F5EE /* ActionSheetDatePicker.m */; };
+		2D1382FF1A7639120026F5EE /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382F21A7639120026F5EE /* ActionSheetDistancePicker.m */; };
+		2D1383001A7639120026F5EE /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382F41A7639120026F5EE /* ActionSheetLocalePicker.m */; };
+		2D1383011A7639120026F5EE /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382F71A7639120026F5EE /* ActionSheetStringPicker.m */; };
+		2D1383021A7639120026F5EE /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382F91A7639120026F5EE /* DistancePickerView.m */; };
+		2D1383031A7639120026F5EE /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1382FB1A7639120026F5EE /* SWActionSheet.m */; };
+		2D1383071A764E200026F5EE /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1383061A764E200026F5EE /* DLRadioButton.m */; };
 		2D34BC311A63D82800A0160D /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D34BC301A63D82800A0160D /* HMSegmentedControl.m */; };
 		2D3FFF101A63793E00294EC5 /* TESTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3FFF0E1A63793E00294EC5 /* TESTTableViewCell.swift */; };
 		2D3FFF111A63793E00294EC5 /* TESTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3FFF0F1A63793E00294EC5 /* TESTTableViewCell.xib */; };
@@ -17,7 +27,14 @@
 		2D40F78F1A5904690055D05B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D40F78E1A5904690055D05B /* UIKit.framework */; };
 		2D40F7911A5904740055D05B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D40F7901A5904740055D05B /* Foundation.framework */; };
 		2D40F7931A5904800055D05B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D40F7921A5904800055D05B /* CoreGraphics.framework */; };
+		2D4153531A709FEE008DD666 /* timer图标1X.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4153501A709FEE008DD666 /* timer图标1X.png */; };
+		2D4153541A709FEE008DD666 /* timer图标2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4153511A709FEE008DD666 /* timer图标2X.png */; };
+		2D4153551A709FEE008DD666 /* timer图标3X.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4153521A709FEE008DD666 /* timer图标3X.png */; };
+		2D4199431A71E974001D4B5B /* HomeNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4199421A71E974001D4B5B /* HomeNC.swift */; };
+		2D4199451A724451001D4B5B /* RecomUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4199441A724451001D4B5B /* RecomUserCell.swift */; };
 		2D58D35C1A6798BC0013D2F9 /* UserPageStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D58D35A1A6798BC0013D2F9 /* UserPageStatusCell.swift */; };
+		2D7B9A0F1A75E37E00D97FD9 /* RecomUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B9A0D1A75E37E00D97FD9 /* RecomUserCollectionViewCell.swift */; };
+		2D7B9A101A75E37E00D97FD9 /* RecomUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7B9A0E1A75E37E00D97FD9 /* RecomUserCollectionViewCell.xib */; };
 		2D7BCD6A1A5FB1D800202569 /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BCD691A5FB1D800202569 /* PriceRange.swift */; };
 		2D8A96E51A6E071500C25850 /* CustomUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A96E41A6E071500C25850 /* CustomUtils.swift */; };
 		2D8A96E91A6E5DDF00C25850 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A96E81A6E5DDF00C25850 /* MenuTVC.swift */; };
@@ -46,6 +63,14 @@
 		2DD327201A18DEE500E748DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3271F1A18DEE500E748DB /* Images.xcassets */; };
 		2DD327231A18DEE500E748DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD327211A18DEE500E748DB /* LaunchScreen.xib */; };
 		2DD3272F1A18DEE500E748DB /* SailDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3272E1A18DEE500E748DB /* SailDemoTests.swift */; };
+		2DD6493B1A6F4ADA003541FB /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6493A1A6F4ADA003541FB /* FriendsListCell.swift */; };
+		2DD6493D1A6F4AFC003541FB /* MessageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6493C1A6F4AFC003541FB /* MessageListCell.swift */; };
+		2DD6493F1A6F4B2F003541FB /* PurchaseRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6493E1A6F4B2F003541FB /* PurchaseRecordCell.swift */; };
+		2DD649411A6F4B7C003541FB /* GroupRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD649401A6F4B7C003541FB /* GroupRecordCell.swift */; };
+		2DD649451A6F78F2003541FB /* 信息图标1X+.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD649421A6F78F2003541FB /* 信息图标1X+.png */; };
+		2DD649461A6F78F2003541FB /* 信息图标2X+.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD649431A6F78F2003541FB /* 信息图标2X+.png */; };
+		2DD649471A6F78F2003541FB /* 信息图标3X+.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD649441A6F78F2003541FB /* 信息图标3X+.png */; };
+		2DD6494B1A6FB2C2003541FB /* BaseNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6494A1A6FB2C2003541FB /* BaseNC.swift */; };
 		2DDC2CA31A63A83E00D5B057 /* DiscoveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2C931A63A83E00D5B057 /* DiscoveryTableViewCell.xib */; };
 		2DDC2CA41A63A83E00D5B057 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC2C941A63A83E00D5B057 /* GroupTableViewCell.swift */; };
 		2DDC2CA51A63A83E00D5B057 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2C951A63A83E00D5B057 /* GroupTableViewCell.xib */; };
@@ -54,12 +79,10 @@
 		2DDC2CA81A63A83E00D5B057 /* DiscoveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC2C981A63A83E00D5B057 /* DiscoveryTableViewCell.swift */; };
 		2DDC2CA91A63A83E00D5B057 /* LeftMenuHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2C991A63A83E00D5B057 /* LeftMenuHeader.xib */; };
 		2DDC2CAA1A63A83E00D5B057 /* RecomRouteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2C9A1A63A83E00D5B057 /* RecomRouteTableViewCell.xib */; };
-		2DDC2CAB1A63A83E00D5B057 /* RecomUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2C9B1A63A83E00D5B057 /* RecomUserCollectionViewCell.xib */; };
 		2DDC2CAC1A63A83E00D5B057 /* RecomUserContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC2C9C1A63A83E00D5B057 /* RecomUserContainerView.swift */; };
 		2DDC2CAD1A63A83E00D5B057 /* RecomUserContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2C9D1A63A83E00D5B057 /* RecomUserContainerView.xib */; };
 		2DDC2CAE1A63A83E00D5B057 /* RecomUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC2C9E1A63A83E00D5B057 /* RecomUserTableViewCell.swift */; };
 		2DDC2CAF1A63A83E00D5B057 /* RecomRouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC2C9F1A63A83E00D5B057 /* RecomRouteTableViewCell.swift */; };
-		2DDC2CB01A63A83E00D5B057 /* RecomUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC2CA01A63A83E00D5B057 /* RecomUserCollectionViewCell.swift */; };
 		2DDC2CB11A63A83E00D5B057 /* RecomUserContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC2CA11A63A83E00D5B057 /* RecomUserContainerCell.swift */; };
 		2DDC2CB21A63A83E00D5B057 /* RecomUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2CA21A63A83E00D5B057 /* RecomUserTableViewCell.xib */; };
 		2DDC2D1F1A63A85B00D5B057 /* 1X.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC2CB31A63A85B00D5B057 /* 1X.png */; };
@@ -240,6 +263,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D1382E61A7617E40026F5EE /* NewGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewGroupVC.swift; path = Controllers/NewGroupVC.swift; sourceTree = "<group>"; };
+		2D1382EA1A7639120026F5EE /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		2D1382EB1A7639120026F5EE /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		2D1382EC1A7639120026F5EE /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		2D1382ED1A7639120026F5EE /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		2D1382EE1A7639120026F5EE /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		2D1382EF1A7639120026F5EE /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		2D1382F01A7639120026F5EE /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		2D1382F11A7639120026F5EE /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		2D1382F21A7639120026F5EE /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		2D1382F31A7639120026F5EE /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		2D1382F41A7639120026F5EE /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		2D1382F51A7639120026F5EE /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		2D1382F61A7639120026F5EE /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		2D1382F71A7639120026F5EE /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		2D1382F81A7639120026F5EE /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		2D1382F91A7639120026F5EE /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		2D1382FA1A7639120026F5EE /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		2D1382FB1A7639120026F5EE /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		2D1383051A764E200026F5EE /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		2D1383061A764E200026F5EE /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		2D34BC2F1A63D82800A0160D /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		2D34BC301A63D82800A0160D /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		2D3FFF0E1A63793E00294EC5 /* TESTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TESTTableViewCell.swift; path = SailDemo/Views/TESTTableViewCell.swift; sourceTree = "<group>"; };
@@ -251,7 +295,14 @@
 		2D40F78E1A5904690055D05B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2D40F7901A5904740055D05B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D40F7921A5904800055D05B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2D4153501A709FEE008DD666 /* timer图标1X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer图标1X.png"; sourceTree = "<group>"; };
+		2D4153511A709FEE008DD666 /* timer图标2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer图标2X.png"; sourceTree = "<group>"; };
+		2D4153521A709FEE008DD666 /* timer图标3X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer图标3X.png"; sourceTree = "<group>"; };
+		2D4199421A71E974001D4B5B /* HomeNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeNC.swift; path = Controllers/HomeNC.swift; sourceTree = "<group>"; };
+		2D4199441A724451001D4B5B /* RecomUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecomUserCell.swift; path = SailDemo/Views/RecomUserCell.swift; sourceTree = "<group>"; };
 		2D58D35A1A6798BC0013D2F9 /* UserPageStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPageStatusCell.swift; path = SailDemo/Views/UserPageStatusCell.swift; sourceTree = "<group>"; };
+		2D7B9A0D1A75E37E00D97FD9 /* RecomUserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecomUserCollectionViewCell.swift; path = SailDemo/Views/RecomUserCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D7B9A0E1A75E37E00D97FD9 /* RecomUserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecomUserCollectionViewCell.xib; path = SailDemo/Views/RecomUserCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D7BCD691A5FB1D800202569 /* PriceRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriceRange.swift; path = SailDemo/Model/PriceRange.swift; sourceTree = "<group>"; };
 		2D8A96E41A6E071500C25850 /* CustomUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUtils.swift; path = SailDemo/Utils/CustomUtils.swift; sourceTree = "<group>"; };
 		2D8A96E81A6E5DDF00C25850 /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTVC.swift; path = Controllers/MenuTVC.swift; sourceTree = "<group>"; };
@@ -287,6 +338,14 @@
 		2DD327281A18DEE500E748DB /* SailDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SailDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD3272D1A18DEE500E748DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DD3272E1A18DEE500E748DB /* SailDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SailDemoTests.swift; sourceTree = "<group>"; };
+		2DD6493A1A6F4ADA003541FB /* FriendsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsListCell.swift; path = SailDemo/Views/FriendsListCell.swift; sourceTree = "<group>"; };
+		2DD6493C1A6F4AFC003541FB /* MessageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListCell.swift; path = SailDemo/Views/MessageListCell.swift; sourceTree = "<group>"; };
+		2DD6493E1A6F4B2F003541FB /* PurchaseRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseRecordCell.swift; path = SailDemo/Views/PurchaseRecordCell.swift; sourceTree = "<group>"; };
+		2DD649401A6F4B7C003541FB /* GroupRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupRecordCell.swift; path = SailDemo/Views/GroupRecordCell.swift; sourceTree = "<group>"; };
+		2DD649421A6F78F2003541FB /* 信息图标1X+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "信息图标1X+.png"; path = "images/信息图标1X+.png"; sourceTree = "<group>"; };
+		2DD649431A6F78F2003541FB /* 信息图标2X+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "信息图标2X+.png"; path = "images/信息图标2X+.png"; sourceTree = "<group>"; };
+		2DD649441A6F78F2003541FB /* 信息图标3X+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "信息图标3X+.png"; path = "images/信息图标3X+.png"; sourceTree = "<group>"; };
+		2DD6494A1A6FB2C2003541FB /* BaseNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNC.swift; path = Controllers/BaseNC.swift; sourceTree = "<group>"; };
 		2DDC2C931A63A83E00D5B057 /* DiscoveryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiscoveryTableViewCell.xib; path = SailDemo/Views/DiscoveryTableViewCell.xib; sourceTree = "<group>"; };
 		2DDC2C941A63A83E00D5B057 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupTableViewCell.swift; path = SailDemo/Views/GroupTableViewCell.swift; sourceTree = "<group>"; };
 		2DDC2C951A63A83E00D5B057 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupTableViewCell.xib; path = SailDemo/Views/GroupTableViewCell.xib; sourceTree = "<group>"; };
@@ -295,12 +354,10 @@
 		2DDC2C981A63A83E00D5B057 /* DiscoveryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoveryTableViewCell.swift; path = SailDemo/Views/DiscoveryTableViewCell.swift; sourceTree = "<group>"; };
 		2DDC2C991A63A83E00D5B057 /* LeftMenuHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuHeader.xib; path = SailDemo/Views/LeftMenuHeader.xib; sourceTree = "<group>"; };
 		2DDC2C9A1A63A83E00D5B057 /* RecomRouteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecomRouteTableViewCell.xib; path = SailDemo/Views/RecomRouteTableViewCell.xib; sourceTree = "<group>"; };
-		2DDC2C9B1A63A83E00D5B057 /* RecomUserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecomUserCollectionViewCell.xib; path = SailDemo/Views/RecomUserCollectionViewCell.xib; sourceTree = "<group>"; };
 		2DDC2C9C1A63A83E00D5B057 /* RecomUserContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecomUserContainerView.swift; path = SailDemo/Views/RecomUserContainerView.swift; sourceTree = "<group>"; };
 		2DDC2C9D1A63A83E00D5B057 /* RecomUserContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecomUserContainerView.xib; path = SailDemo/Views/RecomUserContainerView.xib; sourceTree = "<group>"; };
 		2DDC2C9E1A63A83E00D5B057 /* RecomUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecomUserTableViewCell.swift; path = SailDemo/Views/RecomUserTableViewCell.swift; sourceTree = "<group>"; };
 		2DDC2C9F1A63A83E00D5B057 /* RecomRouteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecomRouteTableViewCell.swift; path = SailDemo/Views/RecomRouteTableViewCell.swift; sourceTree = "<group>"; };
-		2DDC2CA01A63A83E00D5B057 /* RecomUserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecomUserCollectionViewCell.swift; path = SailDemo/Views/RecomUserCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DDC2CA11A63A83E00D5B057 /* RecomUserContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecomUserContainerCell.swift; path = SailDemo/Views/RecomUserContainerCell.swift; sourceTree = "<group>"; };
 		2DDC2CA21A63A83E00D5B057 /* RecomUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecomUserTableViewCell.xib; path = SailDemo/Views/RecomUserTableViewCell.xib; sourceTree = "<group>"; };
 		2DDC2CB31A63A85B00D5B057 /* 1X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1X.png; path = images/1X.png; sourceTree = "<group>"; };
@@ -516,6 +573,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1382E81A7639000026F5EE /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				2D1382E91A7639120026F5EE /* Pickers */,
+			);
+			name = Pickers;
+			sourceTree = "<group>";
+		};
+		2D1382E91A7639120026F5EE /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				2D1382EA1A7639120026F5EE /* AbstractActionSheetPicker.h */,
+				2D1382EB1A7639120026F5EE /* AbstractActionSheetPicker.m */,
+				2D1382EC1A7639120026F5EE /* ActionSheetCustomPicker.h */,
+				2D1382ED1A7639120026F5EE /* ActionSheetCustomPicker.m */,
+				2D1382EE1A7639120026F5EE /* ActionSheetCustomPickerDelegate.h */,
+				2D1382EF1A7639120026F5EE /* ActionSheetDatePicker.h */,
+				2D1382F01A7639120026F5EE /* ActionSheetDatePicker.m */,
+				2D1382F11A7639120026F5EE /* ActionSheetDistancePicker.h */,
+				2D1382F21A7639120026F5EE /* ActionSheetDistancePicker.m */,
+				2D1382F31A7639120026F5EE /* ActionSheetLocalePicker.h */,
+				2D1382F41A7639120026F5EE /* ActionSheetLocalePicker.m */,
+				2D1382F51A7639120026F5EE /* ActionSheetPicker.h */,
+				2D1382F61A7639120026F5EE /* ActionSheetStringPicker.h */,
+				2D1382F71A7639120026F5EE /* ActionSheetStringPicker.m */,
+				2D1382F81A7639120026F5EE /* DistancePickerView.h */,
+				2D1382F91A7639120026F5EE /* DistancePickerView.m */,
+				2D1382FA1A7639120026F5EE /* SWActionSheet.h */,
+				2D1382FB1A7639120026F5EE /* SWActionSheet.m */,
+			);
+			name = Pickers;
+			path = Library/Pickers;
+			sourceTree = "<group>";
+		};
+		2D1383041A764E200026F5EE /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				2D1383051A764E200026F5EE /* DLRadioButton.h */,
+				2D1383061A764E200026F5EE /* DLRadioButton.m */,
+			);
+			name = DLRadioButton;
+			path = Library/DLRadioButton;
+			sourceTree = "<group>";
+		};
 		2D34BC2E1A63D80300A0160D /* CustomSegment */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +700,9 @@
 			isa = PBXGroup;
 			children = (
 				2DDC2E071A63AA2900D5B057 /* SailDemo-Bridging-Header.h */,
+				2D1382E61A7617E40026F5EE /* NewGroupVC.swift */,
+				2D4199421A71E974001D4B5B /* HomeNC.swift */,
+				2DD6494A1A6FB2C2003541FB /* BaseNC.swift */,
 				2D8A96E81A6E5DDF00C25850 /* MenuTVC.swift */,
 				2D9F51AC1A6CEF2B00024015 /* RouteCVC.swift */,
 				2DB9AA1D1A64EA2B00E5D881 /* UserPageCVC.swift */,
@@ -650,6 +754,8 @@
 		2DD3273F1A18E44F00E748DB /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				2D1383041A764E200026F5EE /* DLRadioButton */,
+				2D1382E81A7639000026F5EE /* Pickers */,
 				2D34BC2E1A63D80300A0160D /* CustomSegment */,
 				2DDC2DEB1A63A92C00D5B057 /* RESIDEMENU */,
 				2D40F7761A58E68F0055D05B /* Weibo */,
@@ -686,12 +792,10 @@
 				2DDC2C981A63A83E00D5B057 /* DiscoveryTableViewCell.swift */,
 				2DDC2C991A63A83E00D5B057 /* LeftMenuHeader.xib */,
 				2DDC2C9A1A63A83E00D5B057 /* RecomRouteTableViewCell.xib */,
-				2DDC2C9B1A63A83E00D5B057 /* RecomUserCollectionViewCell.xib */,
 				2DDC2C9C1A63A83E00D5B057 /* RecomUserContainerView.swift */,
 				2DDC2C9D1A63A83E00D5B057 /* RecomUserContainerView.xib */,
 				2DDC2C9E1A63A83E00D5B057 /* RecomUserTableViewCell.swift */,
 				2DDC2C9F1A63A83E00D5B057 /* RecomRouteTableViewCell.swift */,
-				2DDC2CA01A63A83E00D5B057 /* RecomUserCollectionViewCell.swift */,
 				2DDC2CA11A63A83E00D5B057 /* RecomUserContainerCell.swift */,
 				2DDC2CA21A63A83E00D5B057 /* RecomUserTableViewCell.xib */,
 				2D3FFF0E1A63793E00294EC5 /* TESTTableViewCell.swift */,
@@ -708,6 +812,13 @@
 				2D9F51B21A6CFF1100024015 /* RouteGroupCell.swift */,
 				2D9F51B31A6CFF1100024015 /* RouteGroupCell.xib */,
 				2D9F51B61A6D0AE500024015 /* RouteGroupSectionHeader.swift */,
+				2DD6493A1A6F4ADA003541FB /* FriendsListCell.swift */,
+				2DD6493C1A6F4AFC003541FB /* MessageListCell.swift */,
+				2DD6493E1A6F4B2F003541FB /* PurchaseRecordCell.swift */,
+				2DD649401A6F4B7C003541FB /* GroupRecordCell.swift */,
+				2D4199441A724451001D4B5B /* RecomUserCell.swift */,
+				2D7B9A0D1A75E37E00D97FD9 /* RecomUserCollectionViewCell.swift */,
+				2D7B9A0E1A75E37E00D97FD9 /* RecomUserCollectionViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -808,6 +919,12 @@
 		2DF70C791A1A5D90003C9C8B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2D4153501A709FEE008DD666 /* timer图标1X.png */,
+				2D4153511A709FEE008DD666 /* timer图标2X.png */,
+				2D4153521A709FEE008DD666 /* timer图标3X.png */,
+				2DD649421A6F78F2003541FB /* 信息图标1X+.png */,
+				2DD649431A6F78F2003541FB /* 信息图标2X+.png */,
+				2DD649441A6F78F2003541FB /* 信息图标3X+.png */,
 				2DFEA9051A68BC370000AD80 /* 关注图标1X.png */,
 				2DFEA9061A68BC370000AD80 /* 关注图标2X.png */,
 				2DFEA9071A68BC370000AD80 /* 关注图标3X.png */,
@@ -1024,14 +1141,17 @@
 				2DDC2D661A63A85B00D5B057 /* user3.png in Resources */,
 				2DDC2DBE1A63A8CD00D5B057 /* slider-default7-trackBackground@2x.png in Resources */,
 				2DDC2D3B1A63A85B00D5B057 /* follow3x.png in Resources */,
+				2DD649461A6F78F2003541FB /* 信息图标2X+.png in Resources */,
 				2DDC2D6F1A63A85B00D5B057 /* user24.png in Resources */,
 				2DDC2D2A1A63A85B00D5B057 /* 我的收藏3X.png in Resources */,
+				2D4153531A709FEE008DD666 /* timer图标1X.png in Resources */,
 				2DDC2CA31A63A83E00D5B057 /* DiscoveryTableViewCell.xib in Resources */,
 				2DDC2D711A63A85B00D5B057 /* user32.png in Resources */,
 				2DDC2DC31A63A8CD00D5B057 /* slider-metal-handle.png in Resources */,
 				2DDC2D4D1A63A85B00D5B057 /* tab2_selected1x.png in Resources */,
 				2DDC2D741A63A85B00D5B057 /* user41.png in Resources */,
 				2DDC2CA51A63A83E00D5B057 /* GroupTableViewCell.xib in Resources */,
+				2DD649471A6F78F2003541FB /* 信息图标3X+.png in Resources */,
 				2DDC2DC71A63A8CD00D5B057 /* slider-metal-trackBackground.png in Resources */,
 				2DDC2D441A63A85B00D5B057 /* scene3.png in Resources */,
 				2DFEA90F1A68BC370000AD80 /* 信息图标2X.png in Resources */,
@@ -1045,13 +1165,13 @@
 				2DDC2D4B1A63A85B00D5B057 /* tab1_selected3x.png in Resources */,
 				2DDC2D5F1A63A85B00D5B057 /* tab32x.png in Resources */,
 				2DDC2D291A63A85B00D5B057 /* 我的收藏2X.png in Resources */,
-				2DDC2CAB1A63A83E00D5B057 /* RecomUserCollectionViewCell.xib in Resources */,
 				2DDC2DB81A63A8CD00D5B057 /* slider-default_trackBackground@2x.png in Resources */,
 				2DDC2D1F1A63A85B00D5B057 /* 1X.png in Resources */,
 				2DDC2D471A63A85B00D5B057 /* scene6.png in Resources */,
 				2DDC2D841A63A85B00D5B057 /* profile12.png in Resources */,
 				2D9F51B11A6CF90800024015 /* RouteHeader.xib in Resources */,
 				2DDC2D4C1A63A85B00D5B057 /* tab2_highlight.png in Resources */,
+				2D4153541A709FEE008DD666 /* timer图标2X.png in Resources */,
 				2DDC2D221A63A85B00D5B057 /* 我的好友1X.png in Resources */,
 				2DDC2D251A63A85B00D5B057 /* 我的开组1X.png in Resources */,
 				2DDC2D4E1A63A85B00D5B057 /* tab2_selected2x.png in Resources */,
@@ -1067,6 +1187,7 @@
 				2DDC2D721A63A85B00D5B057 /* user33.png in Resources */,
 				2DDC2D681A63A85B00D5B057 /* user11.png in Resources */,
 				2DDC2D701A63A85B00D5B057 /* user31.png in Resources */,
+				2D7B9A101A75E37E00D97FD9 /* RecomUserCollectionViewCell.xib in Resources */,
 				2DDC2D891A63A85B00D5B057 /* route3.png in Resources */,
 				2DDC2DC41A63A8CD00D5B057 /* slider-metal-handle@2x.png in Resources */,
 				2DDC2D231A63A85B00D5B057 /* 我的好友2X.png in Resources */,
@@ -1092,6 +1213,7 @@
 				2DDC2D691A63A85B00D5B057 /* user12.png in Resources */,
 				2DDC2D5D1A63A85B00D5B057 /* tab31x.png in Resources */,
 				2DDC2D371A63A85B00D5B057 /* banner2.jpg in Resources */,
+				2DD649451A6F78F2003541FB /* 信息图标1X+.png in Resources */,
 				2DB9AA411A66532800E5D881 /* UserPageHeader.xib in Resources */,
 				2DDC2D881A63A85B00D5B057 /* route2.png in Resources */,
 				2DDC2CA71A63A83E00D5B057 /* DiscoveryCollectionViewCell.xib in Resources */,
@@ -1106,6 +1228,7 @@
 				2DDC2D731A63A85B00D5B057 /* user34.png in Resources */,
 				2DFEA90B1A68BC370000AD80 /* 关注图标1X.png in Resources */,
 				2DDC2D421A63A85B00D5B057 /* scene1.png in Resources */,
+				2D4153551A709FEE008DD666 /* timer图标3X.png in Resources */,
 				2DDC2DBF1A63A8CD00D5B057 /* slider-default7-trackCrossedOver.png in Resources */,
 				2DDC2D501A63A85B00D5B057 /* tab2.png in Resources */,
 				2DDC2D6A1A63A85B00D5B057 /* user13.png in Resources */,
@@ -1186,6 +1309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB9AA381A66159500E5D881 /* CSStickyHeaderFlowLayout.m in Sources */,
+				2D4199431A71E974001D4B5B /* HomeNC.swift in Sources */,
 				2DDC2CB11A63A83E00D5B057 /* RecomUserContainerCell.swift in Sources */,
 				2D9F51B71A6D0AE500024015 /* RouteGroupSectionHeader.swift in Sources */,
 				2DB9AA391A66159500E5D881 /* CSStickyHeaderFlowLayoutAttributes.m in Sources */,
@@ -1194,23 +1318,32 @@
 				2D9F51AD1A6CEF2B00024015 /* RouteCVC.swift in Sources */,
 				2DDC2CA61A63A83E00D5B057 /* DiscoveryCollectionViewCell.swift in Sources */,
 				2DDC2DF71A63A97A00D5B057 /* ImageLoaderCache.swift in Sources */,
+				2DD6493D1A6F4AFC003541FB /* MessageListCell.swift in Sources */,
 				2DDC2DE71A63A91200D5B057 /* MainTabBarViewController.swift in Sources */,
+				2D1382FF1A7639120026F5EE /* ActionSheetDistancePicker.m in Sources */,
+				2D4199451A724451001D4B5B /* RecomUserCell.swift in Sources */,
 				2DB9AA221A64FBEC00E5D881 /* UserPageTVC.swift in Sources */,
 				2DDC2E0A1A63AB0200D5B057 /* UIViewController+RESideMenu.m in Sources */,
 				2D9F51B01A6CF90800024015 /* RouteHeader.swift in Sources */,
+				2D1382FE1A7639120026F5EE /* ActionSheetDatePicker.m in Sources */,
 				2DDC2DE41A63A91200D5B057 /* GroupFilterTVC.swift in Sources */,
+				2D1382E71A7617E40026F5EE /* NewGroupVC.swift in Sources */,
 				2DDC2DF61A63A97A00D5B057 /* ImageLoader.swift in Sources */,
 				2DDC2CA81A63A83E00D5B057 /* DiscoveryTableViewCell.swift in Sources */,
 				2D8A96E91A6E5DDF00C25850 /* MenuTVC.swift in Sources */,
 				2DB9AA401A66532800E5D881 /* UserPageHeader.swift in Sources */,
 				2DDC2DF01A63A95000D5B057 /* RECommonFunctions.m in Sources */,
-				2DDC2CB01A63A83E00D5B057 /* RecomUserCollectionViewCell.swift in Sources */,
 				2D58D35C1A6798BC0013D2F9 /* UserPageStatusCell.swift in Sources */,
 				2DD327171A18DEE500E748DB /* AppDelegate.swift in Sources */,
+				2D1382FC1A7639120026F5EE /* AbstractActionSheetPicker.m in Sources */,
 				2D3FFF101A63793E00294EC5 /* TESTTableViewCell.swift in Sources */,
+				2DD6493F1A6F4B2F003541FB /* PurchaseRecordCell.swift in Sources */,
 				2DDC2CA41A63A83E00D5B057 /* GroupTableViewCell.swift in Sources */,
 				2DDC2DEA1A63A91200D5B057 /* PersonalViewController.swift in Sources */,
+				2D1383011A7639120026F5EE /* ActionSheetStringPicker.m in Sources */,
 				2DDC2DE11A63A91200D5B057 /* GroupController.swift in Sources */,
+				2D1383001A7639120026F5EE /* ActionSheetLocalePicker.m in Sources */,
+				2D1383031A7639120026F5EE /* SWActionSheet.m in Sources */,
 				2DB9AA461A6657E300E5D881 /* UserPageSectionHeader.swift in Sources */,
 				2DB9AA311A6530D000E5D881 /* CustomCollectionFlowLayout.m in Sources */,
 				2DDC2D8D1A63A8AA00D5B057 /* Banner.swift in Sources */,
@@ -1218,20 +1351,27 @@
 				2DDC2DE91A63A91200D5B057 /* RootViewController.swift in Sources */,
 				2DB9AA291A651AE900E5D881 /* UserPageGalleryTableViewCell.swift in Sources */,
 				2DDC2D8E1A63A8AA00D5B057 /* UserRecommendation.swift in Sources */,
+				2D1383071A764E200026F5EE /* DLRadioButton.m in Sources */,
 				2DDC2CAF1A63A83E00D5B057 /* RecomRouteTableViewCell.swift in Sources */,
 				2DDC2CAC1A63A83E00D5B057 /* RecomUserContainerView.swift in Sources */,
 				2DDC2DF11A63A95000D5B057 /* RESideMenu.m in Sources */,
+				2DD649411A6F4B7C003541FB /* GroupRecordCell.swift in Sources */,
 				2DFEA9121A68C1800000AD80 /* UserPageGroupCell.swift in Sources */,
+				2DD6493B1A6F4ADA003541FB /* FriendsListCell.swift in Sources */,
+				2DD6494B1A6FB2C2003541FB /* BaseNC.swift in Sources */,
 				2DDC2DE61A63A91200D5B057 /* LeftMenuViewController.swift in Sources */,
 				2D34BC311A63D82800A0160D /* HMSegmentedControl.m in Sources */,
 				2DDC2DC91A63A8CD00D5B057 /* NMRangeSlider.m in Sources */,
 				2DFEA9141A68FE8D0000AD80 /* UserPageJournal.swift in Sources */,
 				2D7BCD6A1A5FB1D800202569 /* PriceRange.swift in Sources */,
+				2D7B9A0F1A75E37E00D97FD9 /* RecomUserCollectionViewCell.swift in Sources */,
 				2D9F51B41A6CFF1100024015 /* RouteGroupCell.swift in Sources */,
+				2D1383021A7639120026F5EE /* DistancePickerView.m in Sources */,
 				2DDC2DE31A63A91200D5B057 /* GroupDestinationTVC.swift in Sources */,
 				2DDC2DE21A63A91200D5B057 /* DiscoveryViewController.swift in Sources */,
 				2DDC2DE81A63A91200D5B057 /* OrderTableViewController.swift in Sources */,
 				2DB9AA1F1A64EA2B00E5D881 /* UserPageCVC.swift in Sources */,
+				2D1382FD1A7639120026F5EE /* ActionSheetCustomPicker.m in Sources */,
 				2DDC2DE51A63A91200D5B057 /* HomePageViewController.swift in Sources */,
 				2DDC2E0C1A63AB3700D5B057 /* YYCycleScrollView.swift in Sources */,
 				2DDC2DFB1A63A99A00D5B057 /* UIImageView+ImageLoader.swift in Sources */,

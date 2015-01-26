@@ -32,7 +32,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="sampleCover" destination="TBq-pA-Lci" id="vzy-Fu-SNg"/>
             </connections>

@@ -45,5 +45,16 @@ class RecomUserContainerView: UIView, UICollectionViewDataSource, UICollectionVi
         cell.profile.image = UIImage(named: "profile\(indexPath.row + 1).png")
         return cell
     }
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        println(self.view.window?.inputViewController?.description)
+        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+        
+    }
+    func setCollectionViewDataSourceDelegate(dataSourceDelegate delegate: protocol<UICollectionViewDelegate,UICollectionViewDataSource>, index: NSInteger) {
+        self.collectionView.dataSource = delegate
+        self.collectionView.delegate = delegate
+        self.collectionView.tag = index
+        self.collectionView.reloadData()
+    }
 
 }
