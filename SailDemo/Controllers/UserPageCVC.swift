@@ -86,12 +86,12 @@ class UserPageCVC: UICollectionViewController, UICollectionViewDelegateFlowLayou
             var controller = HMSegmentedControl(sectionTitles: ["相册", "个人信息", "状态", "游记"])
             controller.selectedTextColor = UIColor(netHex:0x007AFF)
             controller.selectionIndicatorColor = UIColor(netHex:0x007AFF)
-            controller.frame = CGRectMake(0, 0, view.frame.width, 40);
+            controller.frame = CGRectMake(0, 0, view.frame.width, 38);
             controller.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown
             controller.selectionIndicatorHeight = 3
             controller.addTarget(self, action: "controllerChanged:", forControlEvents:UIControlEvents.ValueChanged)
             var line = UIView(frame: CGRectMake(0, 0, controller.bounds.width, 1))
-            line.backgroundColor = UIColor.brownColor()
+            line.backgroundColor = UIColor.grayColor()
             controller.addSubview(line)
             cell.controllerView.addSubview(controller)
             

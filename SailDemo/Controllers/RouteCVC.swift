@@ -12,7 +12,7 @@ let headerIdentifier = "RouteHeader"
 let cellIdentifier = "RouteGroupCell"
 let sectionHeaderIdentifier = "RouteGroupSectionHeader"
 class RouteCVC: UICollectionViewController {
-    var routeTitle = ""
+    var routeTitle: String?
     var groupTitles = ["可不可以好好玩耍啦", "Wonderlands, 4ever!", "和谐号列车", "观光团一号"]
     var groupDescritions = ["大哥我专业带大家走心出游", "安静地，感受这里的美", "第一次开组希望大家给力", "路见不平一声吼啊"]
     var groupLeaders = ["喜哥", "Bobbb", "GeeGee", "出发出发再出发"]
@@ -92,7 +92,10 @@ class RouteCVC: UICollectionViewController {
         }else{
             var cell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: sectionHeaderIdentifier, forIndexPath: indexPath) as RouteGroupSectionHeader
             cell.detailButton.layer.cornerRadius = 4.0
-            cell.routeTitle.text = routeTitle
+            if let title = routeTitle{
+                cell.routeTitle.text = title
+            }
+            
             return cell
         }
        

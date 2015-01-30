@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ImageLoader
 class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, RESideMenuDelegate {
     var menus = ["menu_info","menu_friends","menu_message","menu_group","menu_pay","menu_favorite"]
     @IBOutlet weak var myTableView: UITableView!
@@ -22,6 +22,7 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         request.scope = "all"
         WeiboSDK.sendRequest(request)
     }
+
     var cellId = "leftMenuCell"
     var menuTitles =  ["资料", "好友", "消息", "开组", "支付", "收藏", "设置", "关于"]
     override func viewDidLoad() {
@@ -31,13 +32,19 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.opaque = false
         myTableView.backgroundView = nil
-        //myTableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        //myTableView.transform = CGAffineTransformMakeRotation( (CGFloat)(-M_PI / 2))
-        // Do any additional setup after loading the view.
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receiveAccountInfoChanged:", name: "AccountInfoChange", object: nil)
 
     }
-
+    func receiveAccountInfoChanged(notification: NSNotification){
+        var accountInfo = notification.object as AccountInfo?
+        self.name.text = accountInfo?.name
+        self.name.hidden = false
+        self.login.hidden = true
+        var urlString: String! = accountInfo?.profile
+        var url =  NSURL(string: urlString)
+        self.profile.load(url!, placeholder: UIImage(named: "profile1.png")){ _ in }
+        }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,8 +68,25 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         var headerxib:UIView = NSBundle.mainBundle().loadNibNamed("LeftMenuHeader", owner: self, options: nil).first as UIView
         var tableheader = UIView(frame: CGRectMake(0, 0, 250, 120))
         tableheader.addSubview(headerxib)
-        name.hidden = true
-        signature.hidden = true
+        
+        if let accountInfo = AppTools.AccountTool.getAccountInfo(){
+            var name = accountInfo.name
+            self.name.text = name
+            self.name.hidden = false
+            self.login.hidden = true
+            var urlString: String! = accountInfo.profile
+            var url =  NSURL(string: urlString)
+            self.profile.load(url!, placeholder: UIImage(named: "profile1.png")){ _ in }
+        }else{
+            name.hidden = true
+            signature.hidden = true
+        }
+        self.profile.layer.borderWidth = 2
+        
+        self.profile.layer.borderColor = UIColor.groupTableViewBackgroundColor().CGColor
+        self.profile.layer.cornerRadius = profile!.frame.width / 2
+        self.profile.layer.masksToBounds = true;
+
         return tableheader
         
     }

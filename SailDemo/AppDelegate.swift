@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate{
+    var weiboToken:String?
+    var weiboUserId:String?
     var window: UIWindow?
     //for weibo
     let APPID = "123456789"
@@ -24,13 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
         WeiboSDK.registerApp(APPKEY)
         return true
     }
-    func uicolorFromHex(rgbValue:UInt32)->UIColor{
-        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
-        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
-        let blue = CGFloat(rgbValue & 0xFF)/256.0
-        
-        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
-    }
+//    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+//        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+//        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+//        let blue = CGFloat(rgbValue & 0xFF)/256.0
+//        
+//        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+//    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -70,11 +73,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
             var alert = UIAlertView(title: "发送结果", message: message, delegate: nil, cancelButtonTitle: "确定")
             alert.show()
         } else if (response.isKindOfClass(WBAuthorizeResponse)) {
-            var message = "响应状态2: \(response.statusCode.rawValue)\nresponse.userId: \((response as WBAuthorizeResponse).userID)\nresponse.accessToken: \((response as WBAuthorizeResponse).accessToken)\n响应UserInfo数据: \(response.userInfo)\n原请求UserInfo数据: \(response.requestUserInfo)"
-            var alert = UIAlertView(title: "认证结果", message: message, delegate: nil, cancelButtonTitle: "确定")
-            alert.show()
+            
+            weiboToken = (response as WBAuthorizeResponse).accessToken
+            weiboUserId = (response as WBAuthorizeResponse).userID
+            println(weiboToken)
+            println(weiboUserId)
+            if weiboToken != nil{
+                requestForUserProfile()
+            }
+            
+//            var message = "响应状态2: \(response.statusCode.rawValue)\nresponse.userId: \((response as WBAuthorizeResponse).userID)\nresponse.accessToken: \((response as WBAuthorizeResponse).accessToken)\n响应UserInfo数据: \(response.userInfo)\n原请求UserInfo数据: \(response.requestUserInfo)"
+//            var alert = UIAlertView(title: "认证结果", message: message, delegate: nil, cancelButtonTitle: "确定")
+//            alert.show()
         }
     }
+    
+    func requestForUserProfile(){
+        
+        Alamofire.request(.GET, "https://api.weibo.com/2/users/show.json", parameters: ["source": "\(APPKEY)","access_token": "\(weiboToken!)", "uid": "\(weiboUserId!)"])
+        .responseJSON { (_, response, JSON, error) in
+            if (error == nil ){
+                var info = JSON as NSDictionary
+                
+                println("response = " + "\(response)")
+                println(JSON)
+                self.saveData(info)
+                self.refreshData()
+            }else{
+                println(error)
+            }
+            
+        }
+    }
+    func saveData(info:NSDictionary){
+        var name = info["name"] as String
+        var profile = info["avatar_large"] as String
+        println(name)
+        println(profile)
+        println(weiboToken!)
+        println(weiboUserId!)
+        var accountInfo = AccountInfo()
+        accountInfo.name = name
+        accountInfo.profile = profile
+        accountInfo.token = weiboToken!
+        accountInfo.id = weiboUserId!
+        
+        AppTools.AccountTool.setAccountInfo(accountInfo)
+        
+    }
+    func refreshData(){
+        if let accountInfo = AppTools.AccountTool.getAccountInfo(){
+           
+            NSNotificationCenter.defaultCenter().postNotificationName("AccountInfoChange", object: accountInfo)
+        }
+        
+        
+    }
+
+    
  
 }
 

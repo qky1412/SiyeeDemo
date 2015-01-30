@@ -11,26 +11,25 @@ import UIKit
 class NewGroupVC: UIViewController {
     @IBOutlet weak var tfGroupName: UITextField!
 
+    @IBOutlet var radioButtonGroup: [DLRadioButton]!
     @IBOutlet weak var lbDeparture: UILabel!
     @IBOutlet weak var btnTime: UIButton!
     @IBOutlet weak var tfGroupSign: UITextField!
+    
+    @IBOutlet weak var groupNumbersView: UIView!
+    var dateStrings = ["2015年2月1号","2015年2月8号","2015年2月15号","2015年2月22号","2015年2月29号"]
+    var peopleLimits = ["6", "8", "16"]
     @IBAction func btnTimeClick(sender: UIButton) {
-        var datePicker = ActionSheetDatePicker(title: "选择出发日期", datePickerMode: UIDatePickerMode.Date, selectedDate: NSDate(), doneBlock: {ActionStringDoneBlock in return println("fuck u")}, cancelBlock: {ActionStringCancelBlock in return }, origin: sender.superview!.superview)
-//        var datePicker = ActionSheetDatePicker(title: "选择出发日期", datePickerMode: UIDatePickerMode.Date, selectedDate: NSDate(), target: self, action: "refreshDate:", origin: sender.superview!.superview)
-        let secondsInWeek: NSTimeInterval = 7 * 24 * 60 * 60;
-        datePicker.minimumDate = NSDate(timeInterval: -secondsInWeek, sinceDate: NSDate())
-        datePicker.maximumDate = NSDate(timeInterval: secondsInWeek, sinceDate: NSDate())
-        
-        datePicker.showActionSheetPicker()
+        var mPicker = ActionSheetStringPicker(title: "选择出发日期", rows: dateStrings, initialSelection: 0, doneBlock: {(ActionSheetStringPicker picker, NSInteger selectedIndex, id selectedValue) in return {self.refreshDate(selectedIndex)}()}, cancelBlock: {ActionStringCancelBlock in return }, origin: sender.superview!.superview)
+        mPicker.showActionSheetPicker()
     }
-    func refreshDate(obj:NSDate){
-        println("hehe")
+    func refreshDate(selectedIndex: Int){
+        btnTime.setTitle(dateStrings[selectedIndex], forState:UIControlState.Normal)
     }
     //@IBOutlet var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //scrollView.directionalLockEnabled = true
-        // Do any additional setup after loading the view.
+        setupGroupNumbersView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +37,16 @@ class NewGroupVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func setupGroupNumbersView(){
+        for i in 0...2{
+            var button = radioButtonGroup[i]
+            button.setTitle(peopleLimits[i], forState: UIControlState.Normal)
+            button.ButtonIcon = UIImage(named: "radioButtonPeople")
+            button.ButtonIconSelected = UIImage(named: "radioButtonPeopleChecked")
+            button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        }
+        radioButtonGroup[1].selected = true
+    }
     /*
     // MARK: - Navigation
 

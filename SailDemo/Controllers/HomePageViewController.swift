@@ -8,10 +8,15 @@
 
 import UIKit
 import Foundation
-class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
+import CoreLocation
+class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, BWWalkthroughViewControllerDelegate, CLLocationManagerDelegate{
+    
     @IBOutlet weak var myBannerView: UIScrollView!
     @IBOutlet weak var myTableView: UITableView!
     
+    let locationManager = CLLocationManager()
+    var locationStatus : NSString = "Not Started"
+    var locationIsGet: Bool = false
     var count = 5
     var banners : Array<String>!
     var users : Array<String>!
@@ -29,8 +34,24 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "爱走"
+        self.title = "正在定位"
+        initLocationManager()
+        
         self.myTableView!.tableFooterView = UIView(frame:CGRectZero)
+        
+
+        initBanner()
+        
+        var nib = UINib(nibName:"RecomRouteTableViewCell", bundle: nil)
+        
+        myTableView.registerNib(nib, forCellReuseIdentifier: routeCellId)
+        
+        //myTableView.registerClass(RecomUserTableViewCell.self, forCellReuseIdentifier: userCellId)
+        myTableView.reloadData()
+        
+        
+    }
+    func initBanner(){
         var viewsArray = NSMutableArray()
         for  i in 0...2 {
             var tempImgaeView = UIImageView(frame:CGRectMake(0, 0, self.view.frame.width, 150))
@@ -53,16 +74,75 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             println("点击了\(pageIndex)")
         }
         myTableView.tableHeaderView = mainScorllView
+    }
+    
+    func initLocationManager(){
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        println("start fetching location")
+    }
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        if !locationIsGet{
+            CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
+                
+                if (error != nil) {
+                    println("Error: " + error.localizedDescription)
+                    return
+                }
+                
+                if placemarks.count > 0 {
+                    self.locationIsGet = true
+                    let pm = placemarks[0] as CLPlacemark
+                    self.displayLocationInfo(pm)
+                } else {
+                    println("Error with the data.")
+                }
+            })
+        }
+
+    }
+    
+    func displayLocationInfo(placemark: CLPlacemark) {
         
-        var nib = UINib(nibName:"RecomRouteTableViewCell", bundle: nil)
-        
-        myTableView.registerNib(nib, forCellReuseIdentifier: routeCellId)
-        
-        //myTableView.registerClass(RecomUserTableViewCell.self, forCellReuseIdentifier: userCellId)
-        myTableView.reloadData()
-        
+        self.locationManager.stopUpdatingLocation()
+        println(placemark.locality)
+        println(placemark.postalCode)
+        println(placemark.administrativeArea)
+        println(placemark.country)
+        self.title = placemark.locality
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("Error: " + error.localizedDescription)
     }
 
+    
+//    func locationManager(manager: CLLocationManager!,
+//        didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+//            var shouldIAllow = false
+//            
+//            switch status {
+//            case CLAuthorizationStatus.Restricted:
+//                locationStatus = "Restricted Access to location"
+//            case CLAuthorizationStatus.Denied:
+//                locationStatus = "User denied access to location"
+//            case CLAuthorizationStatus.NotDetermined:
+//                locationStatus = "Status not determined"
+//            default:
+//                locationStatus = "Allowed to location Access"
+//                shouldIAllow = true
+//            }
+//            NSNotificationCenter.defaultCenter().postNotificationName("LabelHasbeenUpdated", object: nil)
+//            if (shouldIAllow == true) {
+//                NSLog("Location to Allowed")
+//                // Start location services
+//                locationManager.startUpdatingLocation()
+//            } else {
+//                NSLog("Denied access: \(locationStatus)")
+//            }
+//    }
     func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
 
     }
@@ -77,7 +157,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewWillDisappear(animated: Bool) {
         if (self.navigationController!.isKindOfClass(HomeNC)){
             if let button = (self.navigationController as HomeNC).profileButton{
-                UIView.animateWithDuration(0.5, animations: {
+                UIView.animateWithDuration(0.3, animations: {
                     button.alpha = 0.0
                 })
             }
@@ -85,13 +165,48 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     //same as viewWillDisappear, when this view is coming to top, we show the avartar
     override func viewDidAppear(animated: Bool) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if !userDefaults.boolForKey("walkthroughPresented") {
+            
+            showWalkthrough()
+            
+            userDefaults.setBool(true, forKey: "walkthroughPresented")
+            userDefaults.synchronize()
+        }
         if (self.navigationController!.isKindOfClass(HomeNC)){
             if let button = (self.navigationController as HomeNC).profileButton{
-                UIView.animateWithDuration(0.3, animations: {
+                UIView.animateWithDuration(0.5, animations: {
                     button.alpha = 1.0
                 })
             }
         }
+    }
+    func showWalkthrough(){
+        
+        // Get view controllers and build the walkthrough
+        let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
+        let walkthrough = stb.instantiateViewControllerWithIdentifier("walk") as BWWalkthroughViewController
+        let page_zero = stb.instantiateViewControllerWithIdentifier("walk0") as UIViewController
+        let page_one = stb.instantiateViewControllerWithIdentifier("walk1") as UIViewController
+        let page_two = stb.instantiateViewControllerWithIdentifier("walk2") as UIViewController
+        let page_three = stb.instantiateViewControllerWithIdentifier("walk3") as UIViewController
+        
+        // Attach the pages to the master
+        walkthrough.delegate = self
+        walkthrough.addViewController(page_one)
+        walkthrough.addViewController(page_two)
+        walkthrough.addViewController(page_three)
+        walkthrough.addViewController(page_zero)
+        
+        self.presentViewController(walkthrough, animated: true, completion: nil)
+    }
+    func walkthroughPageDidChange(pageNumber: Int) {
+        println("Current Page \(pageNumber)")
+    }
+    
+    func walkthroughCloseButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -100,10 +215,8 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             label.text = "推荐用户"
         } else if (section == 1){
             label.text = "推荐路线"
-            var line = UIView(frame: CGRectMake(0, 0, label.bounds.width, 1))
-            line.backgroundColor = UIColor.blackColor()
-            label.addSubview(line)
         }
+        
         label.textColor = UIColor(netHex:0x007AFF)
         label.font = UIFont(name: label.font.fontName, size: 13)
         label.backgroundColor = UIColor.whiteColor()
